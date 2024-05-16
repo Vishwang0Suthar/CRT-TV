@@ -1,18 +1,14 @@
 "use client";
 import React, { useRef, useState } from "react";
 import useSound from "use-sound";
-import "./home.css";
 import clsx from "clsx";
 import Screen from "@/components/window";
 import Contact from "@/components/contact";
-type Props = {};
 
-const App = (props: Props) => {
+const App = () => {
   const [ans, setAns] = useState("OFF");
-
   const [isChecked, setIsChecked] = React.useState(false);
 
-  //   const [playActive] = useSound("/sounds/pop-in.mp3", { volume: 0.25 });
   const [playOn] = useSound("/sounds/cassette-into.mp3", { volume: 0.65 });
   const [playIn, { stop: stopGlitch }] = useSound("/sounds/tv-glitch.mp3", {
     volume: 0.55,
@@ -27,15 +23,6 @@ const App = (props: Props) => {
 
   const playInTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const playMusTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  //   const handleMouseIn = () => {
-  //     playOn();
-  //     setAns("ON");
-  //   };
-
-  //   const handleMouseOut = () => {
-  //     playOff();
-  //     setAns("OFF");
-  //   };
 
   const handleClick = () => {
     if (!isChecked) {
@@ -60,11 +47,8 @@ const App = (props: Props) => {
       setAns("OFF");
 
       // Clear the timeouts to prevent them from executing if the state changes
-      clearTimeout(playInTimeoutRef.current);
-      clearTimeout(playMusTimeoutRef.current);
-
-      // Clear any additional timeout within playIn
-      //   clearTimeout(stopGlitchTimeoutRef.current);
+      if (playInTimeoutRef.current) clearTimeout(playInTimeoutRef.current);
+      if (playMusTimeoutRef.current) clearTimeout(playMusTimeoutRef.current);
     }
   };
 
@@ -80,8 +64,6 @@ const App = (props: Props) => {
               "bg-red-500": !isChecked,
             }
           )}
-          // onMouseEnter={handleMouseIn}
-          // onMouseLeave={handleMouseOut}
           onClick={handleClick}
         >
           <div
@@ -91,7 +73,6 @@ const App = (props: Props) => {
                 "lg:translate-x-24 translate-x-12": isChecked,
               }
             )}
-            //   " h-16 w-16 shadow-md rounded-full group-hover:translate-x-24 duration-500 bg-white  "
             style={{
               borderRadius: "50%",
               background: "linear-gradient(145deg, #f0f0f0, #cacaca)",
