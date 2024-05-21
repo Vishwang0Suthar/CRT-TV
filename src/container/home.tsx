@@ -63,7 +63,7 @@ const App = () => {
           <Screen checked={isChecked} />
           <div
             className={clsx(
-              "batan rounded-[25em] mb-0 lg:mb-4 z-40 relative top-10 border-4 border-black border-opacity-50 overflow-hidden  lg:h-24 h-14 w-28 lg:w-48 flex px-2  justify-center items-center transition-all duration-300 shadow-inner group ease-in-out ",
+              "batan rounded-[25em] mb-0 lg:mb-4 z-40 relative top-10 border-4 border-black border-opacity-50 overflow-hidden  lg:h-24 h-14 w-28 md:h-18 md:w-36 lg:w-48 flex px-2  justify-center items-center transition-all duration-300 shadow-inner group ease-in-out ",
               {
                 "bg-green-600": isChecked,
                 "bg-red-500": !isChecked,

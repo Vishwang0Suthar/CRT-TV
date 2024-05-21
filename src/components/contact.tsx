@@ -5,9 +5,9 @@ type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <div className="lg:my-0 my-6 contact border-2 border-gray-400 h-full flex gap-0 flex-col w-full ">
+    <div className="lg:my-0 my-6 contact border-2 border-gray-400 h-fit flex gap-2 justify-between flex-col w-full ">
       <div className="p-8 py-2 flex flex-col divide-y-2 divide-gray-400 gap-0">
-        <div className="h-fit w-full  px-6 p-8 justify-between items-center flex gap-10">
+        <div className="h-fit w-full  px-6 p-7 justify-between items-center flex gap-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -25,7 +25,7 @@ const Contact = (props: Props) => {
             </a>
           </p>
         </div>
-        <div className="h-fit  px-6 p-8 fill-current transition-all duration-500 w-full justify-between items-center flex gap-6">
+        <div className="h-fit  px-6 p-7 fill-current transition-all duration-500 w-full justify-between items-center flex gap-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
@@ -44,7 +44,7 @@ const Contact = (props: Props) => {
             </a>
           </p>
         </div>
-        <div className="h-fit w-full px-6 p-8 justify-between items-center flex gap-10">
+        <div className="h-fit w-full px-6 p-7 justify-between items-center flex gap-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
@@ -63,7 +63,7 @@ const Contact = (props: Props) => {
             </a>
           </p>
         </div>
-        <div className="h-fit w-full px-6 p-8 justify-between items-center flex gap-8">
+        <div className="h-fit w-full px-6 p-7 justify-between items-center flex gap-8">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -84,7 +84,7 @@ const Contact = (props: Props) => {
             </a>
           </p>
         </div>
-        <div className="h-fit w-full px-6 p-8 justify-between items-center flex gap-8">
+        <div className="h-fit w-full px-6 p-7 justify-between items-center flex gap-8">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"

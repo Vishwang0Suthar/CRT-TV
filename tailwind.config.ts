@@ -29,6 +29,9 @@ const config: Config = {
       colors: {
         paleBlue:{
           50:"#232b38"
+        },
+        lightBlue:{
+          100:"#2a6f97"
         }
       }
     },
