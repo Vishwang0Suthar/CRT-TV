@@ -38,7 +38,7 @@
 
 }
 
-.contact p {
+.lnkx {
     font-family: "Space Mono", monospace;
     font-weight: 400;
     transition: all 500ms;
@@ -50,12 +50,25 @@
     }
 }
 
-.cr p {
+.hvr {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    transition: all 500ms;
+    font-style: normal;
+    /* color: pink; */
+}
+
+.crtxt {
     color: #232B38;
+    /* color: white; */
     font-family: "Space Mono", monospace;
     font-weight: 800;
     transition: all 500ms;
     font-style: normal;
+
+    &:hover {
+        color: #232B38;
+    }
 }
 
 .screen-img {

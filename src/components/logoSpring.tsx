@@ -4,7 +4,6 @@ import Dripy2 from "@/public/svg/Dripy-4.svg";
 import Dripy3 from "@/public/svg/Dripy-1.svg";
 import Dripy4 from "@/public/svg/Dripy-3.svg";
 import Dripy5 from "@/public/svg/Dripy-2.svg";
-// import classNames from "classnames";
 
 type Props = {};
 
@@ -34,11 +33,11 @@ const Logospring = (props: Props) => {
     const maxOffsetIncrement = 4; // Maximum increment in offset for the top logo
     const offsetIncrement = (maxOffsetIncrement / 4) * (10 - depth); // Calculate offset increment based on depth
     const offset = baseOffset + offsetIncrement; // Calculate offset for the current logo
-    const x = ((mousePosition.x * 3.5) / window.innerWidth - 4) * offset;
-    const y = ((mousePosition.y * 1.5) / window.innerHeight - 3) * offset;
+    const x = ((mousePosition.x * 3) / window.innerWidth - 4) * offset;
+    const y = ((mousePosition.y * 1.2) / window.innerHeight - 3) * offset;
     return {
       transform: `translate(${x}px, ${y}px)`,
-      scale: 1.05,
+      scale: 1.1,
     };
   };
 
@@ -47,9 +46,9 @@ const Logospring = (props: Props) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="follow min-w-44 gap-4 flex justify-center items-center cr h-full w-full font-semibold bg-white"
+      className="follow min-w-44 group relative gap-4 flex justify-center items-center cr h-full w-full font-semibold bg-white"
     >
-      <p className="gap-0 items-center text-end">a</p>
+      <p className="crtxt gap-0 items-center text-end">a</p>
       <span className=" relative min-w-10">
         <Dripy1
           className="logo absolute duration-150 -translate-y-1/3"
@@ -72,8 +71,12 @@ const Logospring = (props: Props) => {
           style={getTransformStyle(1)}
         />
       </span>
-      <p className="min-w-44 ml-4 gap-0 items-center text-end">
+      <p className="crtxt min-w-44 ml-4 gap-0 items-center text-end">
         the coder original
+      </p>
+      <p className="hvr text-sm text-gray-400 absolute group-hover:text-white right-4 bottom-2 lg:flex hidden">
+        {" "}
+        {"{"}hover-here{"}"}
       </p>
     </div>
   );
