@@ -1,5 +1,6 @@
 import React from "react";
 
+import Logospring from "./logoSpring";
 type Props = {};
 
 const Contact = (props: Props) => {
@@ -102,9 +103,7 @@ const Contact = (props: Props) => {
           </p>
         </div>
       </div>
-      <div className=" grid place-items-center  cr h-full w-full font-semibold bg-white">
-        <p className="min-w-44  text-end"> a Dr!py the coder original</p>
-      </div>
+      <Logospring />
     </div>
   );
 };

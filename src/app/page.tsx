@@ -4,13 +4,13 @@ import AnimatedCursor from "react-animated-cursor";
 export default function Home() {
   return (
     <>
-      <AnimatedCursor
+      {/* <AnimatedCursor
         innerSize={8}
-        outerSize={8}
+        outerSize={24}
         color="245,245,220"
         outerAlpha={0.2}
         innerScale={0.7}
-        outerScale={6}
+        outerScale={3}
         clickables={[
           "a",
           'input[type="text"]',
@@ -24,7 +24,7 @@ export default function Home() {
           "button",
           ".link",
         ]}
-      />
+      /> */}
       <App />
     </>
   );
