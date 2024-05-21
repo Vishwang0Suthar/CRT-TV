@@ -11,7 +11,7 @@ const Logospring = (props: Props) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseMove = (event) => {
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (isHovered) {
       const { clientX, clientY } = event;
       setMousePosition({ x: clientX, y: clientY });
@@ -27,7 +27,7 @@ const Logospring = (props: Props) => {
     setMousePosition({ x: 0, y: 0 });
   };
 
-  const getTransformStyle = (depth) => {
+  const getTransformStyle = (depth: number) => {
     if (!isHovered) return {};
     const baseOffset = 0; // Base offset for the bottom logo
     const maxOffsetIncrement = 4; // Maximum increment in offset for the top logo
