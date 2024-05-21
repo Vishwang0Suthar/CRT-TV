@@ -88,7 +88,7 @@ const Screen = ({ checked, ...props }: Props) => {
               <div className="screen-img w-full h-full aspect-[16/10]"></div>
             </div>
           ) : (
-            <div className=" flex items-center justify-center bg-black h-full sm:w-[55vw] md:w-[55vw] w-[90vw] aspect-[16/10] lg:w-[55vw]">
+            <div className=" flex items-center justify-center bg-black h-full  w-[90vw] aspect-[16/10] lg:w-[55vw]">
               <div className="flex flex-col justify-center items-center opacity-0 screen-off ">
                 <h1 className="text-4xl lg:translate-x-0 -translate-x-16 lg:text-6xl text-white text-left  font-semibold w-fit lg:w-80">
                   Dr!py
