@@ -4,6 +4,7 @@ import useSound from "use-sound";
 import clsx from "clsx";
 import Screen from "@/components/window";
 import Contact from "@/components/contact";
+import Popup from "@/components/popup";
 
 const App = () => {
   const [ans, setAns] = useState("OFF");
@@ -53,60 +54,65 @@ const App = () => {
   };
 
   return (
-    <section className="h-screen gap-20 w-full flex lg:flex-row flex-col">
-      <div className="gap-14  max-w-fit relative  flex justify-center items-center flex-col">
-        <Screen checked={isChecked} />
-        <div
-          className={clsx(
-            "batan rounded-[25em] mb-0 lg:mb-4 z-40 relative top-10 border-4 border-black border-opacity-50 overflow-hidden  lg:h-24 h-14 w-28 lg:w-48 flex px-2  justify-center items-center transition-all duration-300 shadow-inner group ease-in-out ",
-            {
-              "bg-green-600": isChecked,
-              "bg-red-500": !isChecked,
-            }
-          )}
-          onClick={handleClick}
-        >
+    <>
+      <Popup checked={isChecked} />
+
+      <section className="h-screen gap-20 w-full flex lg:flex-row flex-col">
+        {/* // <section className="h-screen gap-20 w-full flex flex-col"> */}
+        <div className="gap-14  max-w-fit relative  flex justify-center items-center flex-col">
+          <Screen checked={isChecked} />
           <div
             className={clsx(
-              "lg:h-16 lg:w-16 h-10 absolute left-2 lg:left-2 w-10 shadow-md overflow-hidden grid place-items-center rounded-full duration-500 bg-white",
+              "batan rounded-[25em] mb-0 lg:mb-4 z-40 relative top-10 border-4 border-black border-opacity-50 overflow-hidden  lg:h-24 h-14 w-28 lg:w-48 flex px-2  justify-center items-center transition-all duration-300 shadow-inner group ease-in-out ",
               {
-                "lg:translate-x-24 translate-x-12": isChecked,
+                "bg-green-600": isChecked,
+                "bg-red-500": !isChecked,
               }
             )}
-            style={{
-              borderRadius: "50%",
-              background: "linear-gradient(145deg, #f0f0f0, #cacaca)",
-              boxShadow: "5px 5px 10px #00000,-5px -5px 10px #ffffff",
-            }}
+            onClick={handleClick}
           >
             <div
-              className="lg:h-14 h-6 w-6 lg:w-14"
+              className={clsx(
+                "lg:h-16 lg:w-16 h-10 absolute left-2 lg:left-2 w-10 shadow-md overflow-hidden grid place-items-center rounded-full duration-500 bg-white",
+                {
+                  "lg:translate-x-24 translate-x-12": isChecked,
+                }
+              )}
               style={{
-                borderRadius: "127px",
-                background: "linear-gradient(145deg, #cacaca, #f0f0f0)",
-                boxShadow: "5px 5px 9px #00000,-5px -5px 9px #ffffff",
+                borderRadius: "50%",
+                background: "linear-gradient(145deg, #f0f0f0, #cacaca)",
+                boxShadow: "5px 5px 10px #00000,-5px -5px 10px #ffffff",
               }}
-            ></div>
-          </div>
+            >
+              <div
+                className="lg:h-14 h-6 w-6 lg:w-14"
+                style={{
+                  borderRadius: "127px",
+                  background: "linear-gradient(145deg, #cacaca, #f0f0f0)",
+                  boxShadow: "5px 5px 9px #00000,-5px -5px 9px #ffffff",
+                }}
+              ></div>
+            </div>
 
-          <div
-            className={clsx(
-              "lg:h-4 h-2 w-12 lg:w-24 absolute shadow-inner z-[-1]    rounded-3xl duration-500",
-              {
-                "bg-green-700": isChecked,
-                "bg-red-700": !isChecked,
-              }
-            )}
-          ></div>
-          <p className="lg:text-xl p-2 z-[-1] drop-shadow-lg text-center text-[0.7rem] text-gray-950 -mb-1 self-end w-20  opacity-40  font-bold font-mono">
-            {ans}
-          </p>
+            <div
+              className={clsx(
+                "lg:h-4 h-2 w-12 lg:w-24 absolute shadow-inner z-[-1]    rounded-3xl duration-500",
+                {
+                  "bg-green-700": isChecked,
+                  "bg-red-700": !isChecked,
+                }
+              )}
+            ></div>
+            <p className="lg:text-xl p-2 z-[-1] drop-shadow-lg text-center text-[0.7rem] text-gray-950 -mb-1 self-end w-20  opacity-40  font-bold font-mono">
+              {ans}
+            </p>
+          </div>
         </div>
-      </div>
-      <div className=" w-full">
-        <Contact />
-      </div>
-    </section>
+        <div className=" w-full">
+          <Contact />
+        </div>
+      </section>
+    </>
   );
 };
 

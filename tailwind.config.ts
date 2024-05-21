@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const colors = require("tailwindcss/colors")
 
 const config: Config = {
   content: ["./src/**/*.{js,ts,tsx,jsx}",
@@ -26,8 +27,10 @@ const config: Config = {
 			)`,
       },
       colors: {
-        'primary-rgb': '0, 128, 0', // Define the primary color as a CSS variable
-      },
+        paleBlue:{
+          50:"#232b38"
+        }
+      }
     },
   },
   plugins: [],

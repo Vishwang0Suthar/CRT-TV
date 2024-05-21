@@ -1,0 +1,81 @@
+.musicCr {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    animation: musiccr 8s linear;
+}
+
+.liti {
+    animation: slide 8s linear;
+}
+
+@keyframes musiccr {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    31% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+
+    32% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateY(12px);
+    }
+
+    34% {
+        opacity: 1;
+        transform: translateY(25px);
+    }
+
+    37% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+
+    82% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+
+    83% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+
+    85% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+
+    87% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-400px);
+    }
+
+    30% {
+        transform: translateX(-400px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
