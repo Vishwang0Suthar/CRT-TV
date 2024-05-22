@@ -74,7 +74,7 @@ const Logospring = (props: Props) => {
       <p className="crtxt min-w-44 ml-4 gap-0 items-center text-end">
         the coder original
       </p>
-      <p className="hvr text-sm text-gray-400 animate-pulse absolute group-hover:text-white right-4 bottom-2 lg:flex hidden">
+      <p className="hvr text-sm text-gray-500 animate-pulse absolute group-hover:text-white right-4 bottom-2 lg:flex hidden">
         {" "}
         {"{"}hover-here{"}"}
       </p>
