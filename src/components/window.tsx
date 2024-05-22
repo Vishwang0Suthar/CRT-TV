@@ -83,7 +83,7 @@ const Screen = ({ checked, ...props }: Props) => {
         </div>
         <div className="  relative shadow-inner aspect-[16/10] flex justify-center items-center  flex-1 w-full ">
           {checked ? (
-            <div className="pr-screen opacity-70 aspect-[16/10] relative sm:w-[55vw] md:w-[55vw] w-[90vw] lg:w-[55vw] ">
+            <div className="pr-screen opacity-70 aspect-[16/10] relative  w-[90vw] lg:w-[55vw] ">
               <div className="screen w-full h-full aspect-[16/10] z-30 absolute"></div>
               <div className="screen-img w-full h-full aspect-[16/10]"></div>
             </div>

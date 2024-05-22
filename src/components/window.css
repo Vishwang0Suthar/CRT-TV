@@ -50,6 +50,10 @@
     }
 }
 
+.follow {
+    cursor: grabbing;
+}
+
 .hvr {
     font-family: "Space Mono", monospace;
     font-weight: 400;

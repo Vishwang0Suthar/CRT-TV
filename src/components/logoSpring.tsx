@@ -31,12 +31,12 @@ const Logospring = (props: Props) => {
     if (!isHovered) return {};
     const baseOffset = 0; // Base offset for the bottom logo
     const maxOffsetIncrement = 4; // Maximum increment in offset for the top logo
-    const offsetIncrement = (maxOffsetIncrement / 3.5) * (10 - depth); // Calculate offset increment based on depth
+    const offsetIncrement = (maxOffsetIncrement / 3.5) * (11 - depth); // Calculate offset increment based on depth
     const offset = baseOffset + offsetIncrement; // Calculate offset for the current logo
     const x = ((mousePosition.x * 3) / window.innerWidth - 4) * offset;
     const y = ((mousePosition.y * 1.2) / window.innerHeight - 3) * offset;
     return {
-      transform: `translate(${x}px, ${y}px)`,
+      transform: `translate(${x * 1.2}px, ${y * 1.1}px)`,
       scale: 1.1,
     };
   };
