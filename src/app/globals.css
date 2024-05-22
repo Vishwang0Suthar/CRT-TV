@@ -37,7 +37,7 @@ body {
 
   background: #232b38;
 
-  /* user-select: none; */
+  user-select: none;
 }
 
 header,
