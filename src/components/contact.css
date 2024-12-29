@@ -1,0 +1,30 @@
+
+
+.contact-text:hover p{
+    transform: translateY(-30px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.lnkx {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    transition: all 500ms;
+    font-style: normal;
+    color: white;
+
+    /* &:hover {
+        color: #2a6f97;
+    } */
+}
+
+.lnkx-2 {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    transition: color 300ms linear; /* Smooth transition for color */
+
+    &:hover {
+        color: #2a6f97;
+    }
+}
