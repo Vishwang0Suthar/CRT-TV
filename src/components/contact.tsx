@@ -55,7 +55,7 @@ const Contact = (props: Props) => {
                   </a>
                 </p>
                 {isLargeScreen ? (
-                  <p className="lnkx-2  duration-300 text-sm lg:text-lg line-clamp-1 min-w-32 lg:min-w-44  text-end">
+                  <p className="lnkx-2   text-sm lg:text-lg line-clamp-1 min-w-32 lg:min-w-44  text-end">
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
