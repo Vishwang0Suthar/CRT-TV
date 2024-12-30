@@ -2,22 +2,26 @@ import React, { useEffect, useState } from "react";
 import "./contact.css";
 import { contactData } from "@/lib/constData";
 import Logospring from "./logoSpring";
+
 type Props = {};
 
 const Contact = (props: Props) => {
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1200);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
+    // Ensure the code only runs in the browser
+    const checkScreenSize = () => {
       setIsLargeScreen(window.innerWidth > 1200);
     };
 
+    checkScreenSize(); // Run once on component mount
+
     // Add event listener for resize
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", checkScreenSize);
 
     // Cleanup event listener on component unmount
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", checkScreenSize);
     };
   }, []);
 
@@ -27,35 +31,42 @@ const Contact = (props: Props) => {
         {contactData.map((contact, index) => {
           const Icon = contact.icon;
           return (
-            <>
-              <div className="h-fit w-full  lg:px-6 p-5 lg:p-7 justify-between items-center flex gap-6">
-                <Icon className="scale-100 fill-current  text-white duration-500 hover:text-black" />
-                <div
-                  className={`h-8 overflow-hidden ${
-                    isLargeScreen ? "contact-text" : ""
-                  }`}
+            <div
+              key={index}
+              className="h-fit w-full lg:px-6 p-5 lg:p-7 justify-between items-center flex gap-6"
+            >
+              <Icon className="scale-100 fill-current text-white duration-500 hover:text-black" />
+              <div
+                className={`h-8 overflow-hidden ${
+                  isLargeScreen ? "contact-text" : ""
+                }`}
+              >
+                <p
+                  className={`lnkx ${
+                    isLargeScreen ? "" : "hover:text-lightBlue-100"
+                  }  text-sm lg:text-lg line-clamp-1 min-w-32 lg:min-w-44  text-end`}
                 >
-                  <p
-                    className={`lnkx ${
-                      isLargeScreen ? "" : "hover:text-lightBlue-100"
-                    }  text-sm lg:text-lg line-clamp-1 min-w-32 lg:min-w-44  text-end`}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={contact.url}
                   >
-                    <a target="_blank" href={contact.url}>
+                    {contact.name}
+                  </a>
+                </p>
+                {isLargeScreen ? (
+                  <p className="lnkx-2  duration-300 text-sm lg:text-lg line-clamp-1 min-w-32 lg:min-w-44  text-end">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={contact.url}
+                    >
                       {contact.name}
                     </a>
                   </p>
-                  {isLargeScreen ? (
-                    <p className="lnkx-2  duration-300 text-sm lg:text-lg line-clamp-1 min-w-32 lg:min-w-44  text-end">
-                      <a target="_blank" href={contact.url}>
-                        {contact.name}
-                      </a>
-                    </p>
-                  ) : (
-                    <></>
-                  )}
-                </div>
+                ) : null}
               </div>
-            </>
+            </div>
           );
         })}
       </div>
