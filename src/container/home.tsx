@@ -5,6 +5,7 @@ import clsx from "clsx";
 import Screen from "@/components/window";
 import Contact from "@/components/contact";
 import Popup from "@/components/popup";
+import CursorFollower from "@/components/cursorfollower";
 
 const App = () => {
   const [ans, setAns] = useState("OFF");
@@ -55,6 +56,7 @@ const App = () => {
 
   return (
     <>
+      <CursorFollower />
       <Popup checked={isChecked} />
 
       <section className="h-screen gap-20 w-full flex lg:flex-row flex-col">

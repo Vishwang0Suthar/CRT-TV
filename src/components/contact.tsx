@@ -35,7 +35,7 @@ const Contact = (props: Props) => {
               key={index}
               className="h-fit w-full lg:px-6 p-5 lg:p-7 justify-between items-center flex gap-6"
             >
-              <Icon className="scale-100 fill-current text-white duration-500 hover:text-black" />
+              <Icon className="scale-100 fill-current text-white duration-500 lg:hover:text-white md:hover:text-black" />
               <div
                 className={`h-8 overflow-hidden ${
                   isLargeScreen ? "contact-text" : ""
@@ -48,6 +48,7 @@ const Contact = (props: Props) => {
                 >
                   <a
                     target="_blank"
+                    className="cursor-none"
                     rel="noopener noreferrer"
                     href={contact.url}
                   >
@@ -58,6 +59,7 @@ const Contact = (props: Props) => {
                   <p className="lnkx-2   text-sm lg:text-lg line-clamp-1 min-w-32 lg:min-w-44  text-end">
                     <a
                       target="_blank"
+                      className="cursor-none"
                       rel="noopener noreferrer"
                       href={contact.url}
                     >
