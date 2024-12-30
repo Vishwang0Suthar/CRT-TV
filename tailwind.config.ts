@@ -9,6 +9,7 @@ const config: Config = {
     "./src/containers/**/*.{js,ts,jsx,tsx}",
     "./src/modules/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@medusajs/ui/dist/**/*.{js,jsx,ts,tsx}",],
+    safelist: ['contact-text'],
   theme: {
     extend: {
       backgroundImage: {

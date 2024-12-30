@@ -59,7 +59,7 @@ const App = () => {
 
       <section className="h-screen gap-20 w-full flex lg:flex-row flex-col">
         {/* // <section className="h-screen gap-20 w-full flex flex-col"> */}
-        <div className="lg:gap-8  gap-12 max-w-fit relative  flex justify-center items-center te flex-col">
+        <div className="lg:gap-8  gap-12 max-w-fit relative  flex justify-center items-center  flex-col">
           <Screen checked={isChecked} />
           <div
             className={clsx(
@@ -108,7 +108,7 @@ const App = () => {
             </p>
           </div>
         </div>
-        <div className=" w-full">
+        <div className="min-w-fit ">
           <Contact />
         </div>
       </section>

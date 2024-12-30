@@ -38,17 +38,7 @@
 
 }
 
-.lnkx {
-    font-family: "Space Mono", monospace;
-    font-weight: 400;
-    transition: all 500ms;
-    font-style: normal;
-    color: white;
 
-    &:hover {
-        color: #2a6f97;
-    }
-}
 
 .follow {
     cursor: grabbing;
