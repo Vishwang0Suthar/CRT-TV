@@ -24,9 +24,11 @@ const ModeButton = ({ isDark, isLargeScreen, setIsDark }: Props) => {
   return (
     <>
       <div
-        className={`grid place-content-center ${
-          isDark ? "bg-white border-black" : "bg-black border-white"
-        }  h-12 p-1 aspect-square  border-2 rounded-full ${
+        className={`grid shadow-[5px_5px_0px_0px_rgba(0,0,0)]  place-content-center ${
+          isDark
+            ? "bg-paleBeige-50 border-black"
+            : "bg-black border-paleBeige-50"
+        }  lg:h-12 p-1 aspect-square h-14 lg:border-2 border-[3px]  rounded-full ${
           isLargeScreen
             ? "absolute translate-x-1/2 -translate-y-1/2 right-0 "
             : "  mb-0 translate-y-10  "

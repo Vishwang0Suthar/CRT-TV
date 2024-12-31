@@ -66,9 +66,9 @@ const Popup = ({ checked, isDark, ...props }: Props) => {
                   <g
                     fill-rule="nonzero"
                     stroke="none"
-                    stroke-width="1"
-                    stroke-linecap="butt"
-                    stroke-linejoin="miter"
+                    strokeWidth="1"
+                    strokeLinecap="butt"
+                    strokeLinejoin="miter"
                     stroke-miterlimit="10"
                     stroke-dasharray=""
                     stroke-dashoffset="0"
