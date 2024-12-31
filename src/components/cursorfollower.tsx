@@ -16,7 +16,9 @@ const CursorFollower = () => {
 
     const updateCursorPosition = () => {
       if (cursor) {
-        cursor.style.transform = `translate(${mouseX}px, ${mouseY - 35}px)`; // Subtract half the width and height
+        cursor.style.transform = `translate(${mouseX - 35}px, ${
+          mouseY - 35
+        }px)`; // Subtract half the width and height
       }
       requestAnimationFrame(updateCursorPosition);
     };
@@ -48,6 +50,7 @@ const CursorFollower = () => {
         pointerEvents: "none",
         zIndex: 1000,
       }}
+      className="custom-cursor"
     >
       {/* <div
         ref={cursorRef}

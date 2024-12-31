@@ -5,9 +5,11 @@ import Dripy3 from "@/public/svg/Dripy-1.svg";
 import Dripy4 from "@/public/svg/Dripy-3.svg";
 import Dripy5 from "@/public/svg/Dripy-2.svg";
 
-type Props = {};
+type Props = {
+  isDark: boolean;
+};
 
-const Logospring = (props: Props) => {
+const Logospring = ({ isDark }: Props) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
@@ -46,7 +48,9 @@ const Logospring = (props: Props) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="follow min-w-44 min-h-24 max-h-60 flex-1 group relative gap-4 flex justify-center items-center cr  w-full font-semibold bg-white"
+      className={`follow min-w-44 min-h-24 max-h-60 flex-1 group relative gap-4 flex justify-center items-center cr  w-full font-semibold ${
+        isDark ? "bg-paleBeige-50" : "bg-white"
+      }`}
     >
       <p className="crtxt gap-0 items-center text-end">a</p>
       <span className=" relative min-w-10">
@@ -74,7 +78,13 @@ const Logospring = (props: Props) => {
       <p className="crtxt min-w-44 ml-4 gap-0 items-center text-end">
         the coder original
       </p>
-      <p className="hvr text-sm text-gray-500 animate-pulse absolute group-hover:text-white right-4 bottom-2 lg:flex hidden">
+      <p
+        className={`hvr text-sm  animate-pulse absolute ${
+          isDark
+            ? "group-hover:text-paleBeige-50 text-lightBeige-100"
+            : "group-hover:text-white text-gray-500"
+        } right-4 bottom-2 lg:flex hidden`}
+      >
         {" "}
         {"{"}hover-here{"}"}
       </p>

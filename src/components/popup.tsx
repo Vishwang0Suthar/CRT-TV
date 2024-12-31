@@ -3,13 +3,20 @@ import React from "react";
 import "./popup.css";
 type Props = {
   checked?: boolean;
+  isDark: boolean;
 };
 
-const Popup = ({ checked, ...props }: Props) => {
+const Popup = ({ checked, isDark, ...props }: Props) => {
   return (
-    <section className="absolute lg:w-[48rem] left-[50%]  -translate-x-1/2 w-full z-50">
+    <section className="absolute scale-90 lg:scale-100 lg:w-[48rem] left-[50%]  -translate-x-1/2 w-full z-50">
       {checked ? (
-        <div className="musicCr relative flex duration-500 opacity-0 flex-col border-2 border-gray-600 rounded-full overflow-hidden p-4 bg-paleBlue-50 ">
+        <div
+          className={`musicCr relative flex duration-500 opacity-0 flex-col border-2  rounded-full overflow-hidden p-4 ${
+            isDark
+              ? "bg-lightBeige-100 border-paleBeige-50"
+              : "bg-paleBlue-50 border-gray-600"
+          } `}
+        >
           <div className=" w-full px-2 flex justify-between items-center text-white">
             <div>
               <svg
@@ -24,12 +31,24 @@ const Popup = ({ checked, ...props }: Props) => {
             </div>
             <div className="flex-col lg:text-lg text-sm flex items-center">
               <h1 className=" text-md font-semibold">
-                <span className="font-thin text-gray-400">Playing</span> Fly me
-                to the moon{" "}
+                <span
+                  className={`font-thin ${
+                    isDark ? "text-gray-800" : "text-gray-400"
+                  }`}
+                >
+                  Playing
+                </span>{" "}
+                Fly me to the moon{" "}
               </h1>
               <p className="text-end font-semibold  w-full">
-                <span className="font-thin text-gray-400">- </span> Juliana
-                chahayed{" "}
+                <span
+                  className={`font-thin ${
+                    isDark ? "text-gray-800" : "text-gray-400"
+                  }`}
+                >
+                  -{" "}
+                </span>{" "}
+                Juliana chahayed{" "}
               </p>
             </div>
             <div className="aspect-square ">
