@@ -33,10 +33,17 @@ const config: Config = {
         },
         lightBlue:{
           100:"#2a6f97"
+        },
+        paleBeige:{
+          50:"#dcd4c7"
+        },
+        lightBeige:{
+          100:"#d59068"
         }
       }
     },
   },
   plugins: [],
+  darkMode:'class',
 };
 export default config;
