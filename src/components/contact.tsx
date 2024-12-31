@@ -13,7 +13,7 @@ type Props = {
 const Contact = ({ isLargeScreen, isDark, setIsDark }: Props) => {
   return (
     <div
-      className={`lg:my-0 my-6 relative  contact border-2 ${
+      className={`lg:my-0 my-6 relative shadow-[10px_12px_0px_0px_rgba(0,0,0)]  contact border-2 ${
         isDark ? "border-gray-800" : "border-gray-400"
       } h-fit flex gap-2 justify-between flex-col w-full `}
     >
