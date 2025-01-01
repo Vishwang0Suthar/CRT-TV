@@ -8,7 +8,7 @@ type Props = {
 
 const Popup = ({ checked, isDark, ...props }: Props) => {
   return (
-    <section className="absolute scale-90 lg:scale-100 lg:w-[48rem] left-[50%]  -translate-x-1/2 w-full z-50">
+    <section className="absolute cursor-none scale-90 lg:scale-100 lg:w-[48rem] left-[50%]  -translate-x-1/2 w-full z-50">
       {checked ? (
         <div
           className={`musicCr relative flex duration-500 opacity-0 flex-col border-2  rounded-full overflow-hidden p-4 ${
@@ -54,6 +54,7 @@ const Popup = ({ checked, isDark, ...props }: Props) => {
             <div className="aspect-square ">
               <a
                 target="_blank"
+                className="lg:cursor-none"
                 href="https://youtu.be/FRo_9RMm5q8?si=M4hteRjOX8RAEYrW"
               >
                 <svg

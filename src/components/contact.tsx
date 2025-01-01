@@ -36,7 +36,7 @@ const Contact = ({ isLargeScreen, isDark, setIsDark }: Props) => {
           return (
             <div
               key={index}
-              className="h-fit w-full  lg:px-6 p-5  lg:p-7 justify-between items-center flex gap-6"
+              className="h-fit w-full cursor-none lg:px-6 p-5  lg:p-7 justify-between items-center flex gap-6"
             >
               <Icon
                 className={`scale-100 fill-current duration-500 ${
