@@ -41,7 +41,7 @@ const CursorFollower = () => {
         width: "70px",
         height: "70px",
         backgroundColor: "black",
-        border: "2px solid white",
+        border: "0px solid white",
         mixBlendMode: "difference",
         filter: "invert(100%)",
         borderRadius: "50%",
