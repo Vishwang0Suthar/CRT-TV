@@ -51,11 +51,11 @@ const Contact = ({ isLargeScreen, isDark, setIsDark }: Props) => {
                 }`}
               >
                 <p
-                  className={`${isDark ? "lnkx-light" : "lnkx"} ${
-                    isLargeScreen ? "" : "hover:text-lightBlue-100"
-                  } ${
-                    isLargeScreen && isDark ? "" : "hover:text-paleBeige-50"
-                  }  text-sm lg:text-lg line-clamp-1 min-w-32 lg:min-w-44  text-end`}
+                  className={`${
+                    isDark
+                      ? "lnkx-light lg:hover:text-black hover:text-paleBeige-50"
+                      : "lg:hover:text-white hover:text-lightBlue-100 lnkx"
+                  }   text-sm lg:text-lg line-clamp-1 min-w-32 lg:min-w-44  text-end`}
                 >
                   <a
                     target="_blank"
