@@ -45,8 +45,8 @@ const CursorFollower = () => {
         mixBlendMode: "difference",
         filter: "invert(100%)",
         borderRadius: "50%",
-        transition: "transform 50ms ease-in-out",
-        transform: "translate(-50%, -50%)",
+        transition: "transform 5ms ease-in-out",
+        // transform: "translate(-50%, -50%)",
         pointerEvents: "none",
         zIndex: 1000,
       }}
